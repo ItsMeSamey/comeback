@@ -1,0 +1,562 @@
+npm notice run comeback-student-planner@1.0.0 check
+npm notice run node --check app.mjs && node --check core.mjs && node --check server.mjs && npm test && npm run benchmark
+npm notice run comeback-student-planner@1.0.0 test
+npm notice run node --test tests/*.test.mjs
+✔ demo is feasible and explicitly reports impossible work (23.652259ms)
+✔ empty work and empty availability are handled (0.595037ms)
+✔ calendar arithmetic is timezone-independent over leap years, DST, and year boundaries (0.608149ms)
+✔ deadlines include their entire day, but never the next day (0.61644ms)
+✔ work cannot bridge the lunch break or cross disconnected windows (0.527369ms)
+✔ dependencies are enforced even when input order is reversed (0.555952ms)
+✔ invalid imports fail before scheduling (0.784978ms)
+✔ normalization removes unknown fields and does not mutate the input (5.876558ms)
+✔ explicit unsupported versions fail while absent legacy version is accepted (0.793579ms)
+✔ finishing a prerequisite atomically frees its dependents without mutating the original (1.310635ms)
+✔ search improves on greedy for a tight importance tradeoff (0.47607ms)
+✔ a very narrow beam still retains the complete baseline (0.627127ms)
+✔ calendar escaping, UTF-8 folding, CRLF, and floating wall-clock times (1.850584ms)
+✔ calendar task UID survives rescheduling and DTSTAMP records the current export instant (2.027187ms)
+✔ unpruned search matches an independent exhaustive oracle on 40 seeded small cases (8.257519ms)
+✔ independent multi-window oracle: later matching energy can beat earlier completion (5.96608ms)
+✔ independent multi-window oracle: deadline before the week and prerequisite deadline conflict (1.329323ms)
+✔ independent multi-window oracle: reverse input dependency chain crosses disconnected windows (0.736028ms)
+✔ independent multi-window oracle: equal scores prefer earlier total completion across days (1.549008ms)
+✔ independent multi-window oracle: month boundary and a deadline beyond the horizon (0.853519ms)
+✔ independent multi-window oracle: empty availability omits every block (0.40011ms)
+✔ independent multi-window oracle: seeded mixed-window case 1 (0.689325ms)
+✔ independent multi-window oracle: seeded mixed-window case 2 (0.756112ms)
+✔ independent multi-window oracle: seeded mixed-window case 3 (0.638806ms)
+✔ independent multi-window oracle: seeded mixed-window case 4 (1.10356ms)
+✔ independent multi-window oracle: seeded mixed-window case 5 (0.778509ms)
+✔ independent multi-window oracle: seeded mixed-window case 6 (0.62132ms)
+✔ independent multi-window oracle: seeded mixed-window case 7 (0.806701ms)
+✔ independent multi-window oracle: seeded mixed-window case 8 (1.26479ms)
+✔ independent multi-window oracle: seeded mixed-window case 9 (0.415441ms)
+✔ independent multi-window oracle: seeded mixed-window case 10 (2.97907ms)
+✔ independent multi-window oracle: seeded mixed-window case 11 (2.739445ms)
+✔ independent multi-window oracle: seeded mixed-window case 12 (0.520101ms)
+✔ independent multi-window oracle: seeded mixed-window case 13 (0.389141ms)
+✔ independent multi-window oracle: seeded mixed-window case 14 (0.660456ms)
+✔ independent multi-window oracle: seeded mixed-window case 15 (0.683781ms)
+✔ independent multi-window oracle: seeded mixed-window case 16 (0.360513ms)
+✔ local server serves the app, denies unknown files and rejects writes (351.167452ms)
+✔ initial interface renders synthetic schedule and unscheduled reasons (6.770818ms)
+✔ availability toggle recalculates and undo restores original plan (26.921598ms)
+✔ editing a dependency into a cycle fails without corrupting the plan (7.05095ms)
+✔ adding, editing and deleting a task works and treats HTML as text (57.698214ms)
+✔ removing a prerequisite is blocked with a useful explanation (0.494704ms)
+✔ Finish clears all prerequisite references and undo restores the complete prior plan (30.245864ms)
+✔ changing week preserves deadlines and reports infeasible work (32.735547ms)
+✔ empty state is useful and reset restores synthetic attribution (23.115023ms)
+✔ explanation control toggles accessible expanded state (0.444776ms)
+✔ JSON import validates before replacing data and supports undo (28.50504ms)
+✔ a corrupt stored plan exports exact raw recovery and survives edits and reload (61.546008ms)
+✔ recovery storage failure preserves the unreadable primary while edits remain in memory (57.152236ms)
+✔ storage read failure does not claim recovered text or overwrite inaccessible data (33.85182ms)
+ℹ tests 51
+ℹ suites 0
+ℹ pass 51
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2868.098796
+npm notice run comeback-student-planner@1.0.0 benchmark
+npm notice run node tests/benchmark.mjs
+{
+  "note": "Synthetic reproducible workloads, not measured student outcomes. Runtime depends on hardware and shared machine load.",
+  "seed": 20261028,
+  "cases": 60,
+  "tasksPerCase": 16,
+  "beamWidth": 96,
+  "improvedCases": 51,
+  "tiedCases": 9,
+  "worseCases": 0,
+  "totalScore": 244310,
+  "totalBaselineScore": 231220,
+  "medianMs": 3.75,
+  "p95Ms": 8.47,
+  "maxMs": 20.45,
+  "rows": [
+    {
+      "case": 1,
+      "score": 4530,
+      "baseline": 4190,
+      "gain": 340,
+      "ms": 20.45,
+      "expanded": 6690
+    },
+    {
+      "case": 2,
+      "score": 3890,
+      "baseline": 3890,
+      "gain": 0,
+      "ms": 16.54,
+      "expanded": 6268
+    },
+    {
+      "case": 3,
+      "score": 4660,
+      "baseline": 4630,
+      "gain": 30,
+      "ms": 6.44,
+      "expanded": 5082
+    },
+    {
+      "case": 4,
+      "score": 4390,
+      "baseline": 4280,
+      "gain": 110,
+      "ms": 9.03,
+      "expanded": 7114
+    },
+    {
+      "case": 5,
+      "score": 3730,
+      "baseline": 3480,
+      "gain": 250,
+      "ms": 5.13,
+      "expanded": 4331
+    },
+    {
+      "case": 6,
+      "score": 2980,
+      "baseline": 2910,
+      "gain": 70,
+      "ms": 7.59,
+      "expanded": 5967
+    },
+    {
+      "case": 7,
+      "score": 4300,
+      "baseline": 4270,
+      "gain": 30,
+      "ms": 6.61,
+      "expanded": 6860
+    },
+    {
+      "case": 8,
+      "score": 3470,
+      "baseline": 3390,
+      "gain": 80,
+      "ms": 5.24,
+      "expanded": 6219
+    },
+    {
+      "case": 9,
+      "score": 3880,
+      "baseline": 3310,
+      "gain": 570,
+      "ms": 8.47,
+      "expanded": 5093
+    },
+    {
+      "case": 10,
+      "score": 4600,
+      "baseline": 4460,
+      "gain": 140,
+      "ms": 5.84,
+      "expanded": 7810
+    },
+    {
+      "case": 11,
+      "score": 3770,
+      "baseline": 3690,
+      "gain": 80,
+      "ms": 3.75,
+      "expanded": 7573
+    },
+    {
+      "case": 12,
+      "score": 4630,
+      "baseline": 4630,
+      "gain": 0,
+      "ms": 5.3,
+      "expanded": 7588
+    },
+    {
+      "case": 13,
+      "score": 3270,
+      "baseline": 3220,
+      "gain": 50,
+      "ms": 3.02,
+      "expanded": 6326
+    },
+    {
+      "case": 14,
+      "score": 3500,
+      "baseline": 3270,
+      "gain": 230,
+      "ms": 3.91,
+      "expanded": 4940
+    },
+    {
+      "case": 15,
+      "score": 3610,
+      "baseline": 3470,
+      "gain": 140,
+      "ms": 4.81,
+      "expanded": 4835
+    },
+    {
+      "case": 16,
+      "score": 4430,
+      "baseline": 4430,
+      "gain": 0,
+      "ms": 4.61,
+      "expanded": 7657
+    },
+    {
+      "case": 17,
+      "score": 2990,
+      "baseline": 2980,
+      "gain": 10,
+      "ms": 3.47,
+      "expanded": 5823
+    },
+    {
+      "case": 18,
+      "score": 5140,
+      "baseline": 4600,
+      "gain": 540,
+      "ms": 4.91,
+      "expanded": 7904
+    },
+    {
+      "case": 19,
+      "score": 4180,
+      "baseline": 4180,
+      "gain": 0,
+      "ms": 4.44,
+      "expanded": 7454
+    },
+    {
+      "case": 20,
+      "score": 3780,
+      "baseline": 3150,
+      "gain": 630,
+      "ms": 3.89,
+      "expanded": 7805
+    },
+    {
+      "case": 21,
+      "score": 3020,
+      "baseline": 2790,
+      "gain": 230,
+      "ms": 2.97,
+      "expanded": 4238
+    },
+    {
+      "case": 22,
+      "score": 3970,
+      "baseline": 3420,
+      "gain": 550,
+      "ms": 3.95,
+      "expanded": 7385
+    },
+    {
+      "case": 23,
+      "score": 4310,
+      "baseline": 4260,
+      "gain": 50,
+      "ms": 5.32,
+      "expanded": 7120
+    },
+    {
+      "case": 24,
+      "score": 4260,
+      "baseline": 4020,
+      "gain": 240,
+      "ms": 4.73,
+      "expanded": 6916
+    },
+    {
+      "case": 25,
+      "score": 4520,
+      "baseline": 4480,
+      "gain": 40,
+      "ms": 3.56,
+      "expanded": 5756
+    },
+    {
+      "case": 26,
+      "score": 4600,
+      "baseline": 3850,
+      "gain": 750,
+      "ms": 5.26,
+      "expanded": 7144
+    },
+    {
+      "case": 27,
+      "score": 4050,
+      "baseline": 4010,
+      "gain": 40,
+      "ms": 5.35,
+      "expanded": 7982
+    },
+    {
+      "case": 28,
+      "score": 4670,
+      "baseline": 4230,
+      "gain": 440,
+      "ms": 4.97,
+      "expanded": 6557
+    },
+    {
+      "case": 29,
+      "score": 3490,
+      "baseline": 3400,
+      "gain": 90,
+      "ms": 5.31,
+      "expanded": 6929
+    },
+    {
+      "case": 30,
+      "score": 4080,
+      "baseline": 4010,
+      "gain": 70,
+      "ms": 3.27,
+      "expanded": 5889
+    },
+    {
+      "case": 31,
+      "score": 3360,
+      "baseline": 3220,
+      "gain": 140,
+      "ms": 3.73,
+      "expanded": 5100
+    },
+    {
+      "case": 32,
+      "score": 4440,
+      "baseline": 4110,
+      "gain": 330,
+      "ms": 3.76,
+      "expanded": 5216
+    },
+    {
+      "case": 33,
+      "score": 2610,
+      "baseline": 2250,
+      "gain": 360,
+      "ms": 2.72,
+      "expanded": 3935
+    },
+    {
+      "case": 34,
+      "score": 3870,
+      "baseline": 3840,
+      "gain": 30,
+      "ms": 3.11,
+      "expanded": 5815
+    },
+    {
+      "case": 35,
+      "score": 3560,
+      "baseline": 2790,
+      "gain": 770,
+      "ms": 2.54,
+      "expanded": 6350
+    },
+    {
+      "case": 36,
+      "score": 4620,
+      "baseline": 4590,
+      "gain": 30,
+      "ms": 2.57,
+      "expanded": 8147
+    },
+    {
+      "case": 37,
+      "score": 1910,
+      "baseline": 1850,
+      "gain": 60,
+      "ms": 2.03,
+      "expanded": 6743
+    },
+    {
+      "case": 38,
+      "score": 4980,
+      "baseline": 4980,
+      "gain": 0,
+      "ms": 3.12,
+      "expanded": 7754
+    },
+    {
+      "case": 39,
+      "score": 3870,
+      "baseline": 3260,
+      "gain": 610,
+      "ms": 2.74,
+      "expanded": 5129
+    },
+    {
+      "case": 40,
+      "score": 3700,
+      "baseline": 3660,
+      "gain": 40,
+      "ms": 2.83,
+      "expanded": 5098
+    },
+    {
+      "case": 41,
+      "score": 3420,
+      "baseline": 3040,
+      "gain": 380,
+      "ms": 3.01,
+      "expanded": 7664
+    },
+    {
+      "case": 42,
+      "score": 4570,
+      "baseline": 4160,
+      "gain": 410,
+      "ms": 2.92,
+      "expanded": 7095
+    },
+    {
+      "case": 43,
+      "score": 3330,
+      "baseline": 2210,
+      "gain": 1120,
+      "ms": 1.76,
+      "expanded": 4001
+    },
+    {
+      "case": 44,
+      "score": 4750,
+      "baseline": 4200,
+      "gain": 550,
+      "ms": 3.42,
+      "expanded": 5369
+    },
+    {
+      "case": 45,
+      "score": 4800,
+      "baseline": 4740,
+      "gain": 60,
+      "ms": 4.8,
+      "expanded": 6187
+    },
+    {
+      "case": 46,
+      "score": 5280,
+      "baseline": 4780,
+      "gain": 500,
+      "ms": 4.03,
+      "expanded": 6576
+    },
+    {
+      "case": 47,
+      "score": 4200,
+      "baseline": 4150,
+      "gain": 50,
+      "ms": 3.69,
+      "expanded": 7990
+    },
+    {
+      "case": 48,
+      "score": 4470,
+      "baseline": 4430,
+      "gain": 40,
+      "ms": 4,
+      "expanded": 5968
+    },
+    {
+      "case": 49,
+      "score": 4970,
+      "baseline": 4800,
+      "gain": 170,
+      "ms": 3.53,
+      "expanded": 5696
+    },
+    {
+      "case": 50,
+      "score": 3200,
+      "baseline": 3200,
+      "gain": 0,
+      "ms": 2.68,
+      "expanded": 6980
+    },
+    {
+      "case": 51,
+      "score": 4590,
+      "baseline": 4260,
+      "gain": 330,
+      "ms": 2.96,
+      "expanded": 6011
+    },
+    {
+      "case": 52,
+      "score": 3150,
+      "baseline": 2760,
+      "gain": 390,
+      "ms": 2.44,
+      "expanded": 5456
+    },
+    {
+      "case": 53,
+      "score": 4790,
+      "baseline": 4790,
+      "gain": 0,
+      "ms": 3.32,
+      "expanded": 7009
+    },
+    {
+      "case": 54,
+      "score": 4640,
+      "baseline": 4000,
+      "gain": 640,
+      "ms": 2.85,
+      "expanded": 5467
+    },
+    {
+      "case": 55,
+      "score": 3920,
+      "baseline": 3860,
+      "gain": 60,
+      "ms": 2.29,
+      "expanded": 6289
+    },
+    {
+      "case": 56,
+      "score": 4060,
+      "baseline": 3940,
+      "gain": 120,
+      "ms": 3.81,
+      "expanded": 7728
+    },
+    {
+      "case": 57,
+      "score": 4760,
+      "baseline": 4760,
+      "gain": 0,
+      "ms": 3.26,
+      "expanded": 6846
+    },
+    {
+      "case": 58,
+      "score": 5300,
+      "baseline": 5220,
+      "gain": 80,
+      "ms": 2.71,
+      "expanded": 6243
+    },
+    {
+      "case": 59,
+      "score": 3970,
+      "baseline": 3950,
+      "gain": 20,
+      "ms": 3.04,
+      "expanded": 7039
+    },
+    {
+      "case": 60,
+      "score": 4520,
+      "baseline": 4520,
+      "gain": 0,
+      "ms": 2.91,
+      "expanded": 8861
+    }
+  ]
+}

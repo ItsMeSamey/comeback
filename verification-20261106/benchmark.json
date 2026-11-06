@@ -1,0 +1,497 @@
+{
+  "note": "Synthetic reproducible workloads, not measured student outcomes. Runtime depends on hardware and shared machine load.",
+  "seed": 20261028,
+  "cases": 60,
+  "tasksPerCase": 16,
+  "beamWidth": 96,
+  "improvedCases": 51,
+  "tiedCases": 9,
+  "worseCases": 0,
+  "totalScore": 244310,
+  "totalBaselineScore": 231220,
+  "medianMs": 3.75,
+  "p95Ms": 8.47,
+  "maxMs": 20.45,
+  "rows": [
+    {
+      "case": 1,
+      "score": 4530,
+      "baseline": 4190,
+      "gain": 340,
+      "ms": 20.45,
+      "expanded": 6690
+    },
+    {
+      "case": 2,
+      "score": 3890,
+      "baseline": 3890,
+      "gain": 0,
+      "ms": 16.54,
+      "expanded": 6268
+    },
+    {
+      "case": 3,
+      "score": 4660,
+      "baseline": 4630,
+      "gain": 30,
+      "ms": 6.44,
+      "expanded": 5082
+    },
+    {
+      "case": 4,
+      "score": 4390,
+      "baseline": 4280,
+      "gain": 110,
+      "ms": 9.03,
+      "expanded": 7114
+    },
+    {
+      "case": 5,
+      "score": 3730,
+      "baseline": 3480,
+      "gain": 250,
+      "ms": 5.13,
+      "expanded": 4331
+    },
+    {
+      "case": 6,
+      "score": 2980,
+      "baseline": 2910,
+      "gain": 70,
+      "ms": 7.59,
+      "expanded": 5967
+    },
+    {
+      "case": 7,
+      "score": 4300,
+      "baseline": 4270,
+      "gain": 30,
+      "ms": 6.61,
+      "expanded": 6860
+    },
+    {
+      "case": 8,
+      "score": 3470,
+      "baseline": 3390,
+      "gain": 80,
+      "ms": 5.24,
+      "expanded": 6219
+    },
+    {
+      "case": 9,
+      "score": 3880,
+      "baseline": 3310,
+      "gain": 570,
+      "ms": 8.47,
+      "expanded": 5093
+    },
+    {
+      "case": 10,
+      "score": 4600,
+      "baseline": 4460,
+      "gain": 140,
+      "ms": 5.84,
+      "expanded": 7810
+    },
+    {
+      "case": 11,
+      "score": 3770,
+      "baseline": 3690,
+      "gain": 80,
+      "ms": 3.75,
+      "expanded": 7573
+    },
+    {
+      "case": 12,
+      "score": 4630,
+      "baseline": 4630,
+      "gain": 0,
+      "ms": 5.3,
+      "expanded": 7588
+    },
+    {
+      "case": 13,
+      "score": 3270,
+      "baseline": 3220,
+      "gain": 50,
+      "ms": 3.02,
+      "expanded": 6326
+    },
+    {
+      "case": 14,
+      "score": 3500,
+      "baseline": 3270,
+      "gain": 230,
+      "ms": 3.91,
+      "expanded": 4940
+    },
+    {
+      "case": 15,
+      "score": 3610,
+      "baseline": 3470,
+      "gain": 140,
+      "ms": 4.81,
+      "expanded": 4835
+    },
+    {
+      "case": 16,
+      "score": 4430,
+      "baseline": 4430,
+      "gain": 0,
+      "ms": 4.61,
+      "expanded": 7657
+    },
+    {
+      "case": 17,
+      "score": 2990,
+      "baseline": 2980,
+      "gain": 10,
+      "ms": 3.47,
+      "expanded": 5823
+    },
+    {
+      "case": 18,
+      "score": 5140,
+      "baseline": 4600,
+      "gain": 540,
+      "ms": 4.91,
+      "expanded": 7904
+    },
+    {
+      "case": 19,
+      "score": 4180,
+      "baseline": 4180,
+      "gain": 0,
+      "ms": 4.44,
+      "expanded": 7454
+    },
+    {
+      "case": 20,
+      "score": 3780,
+      "baseline": 3150,
+      "gain": 630,
+      "ms": 3.89,
+      "expanded": 7805
+    },
+    {
+      "case": 21,
+      "score": 3020,
+      "baseline": 2790,
+      "gain": 230,
+      "ms": 2.97,
+      "expanded": 4238
+    },
+    {
+      "case": 22,
+      "score": 3970,
+      "baseline": 3420,
+      "gain": 550,
+      "ms": 3.95,
+      "expanded": 7385
+    },
+    {
+      "case": 23,
+      "score": 4310,
+      "baseline": 4260,
+      "gain": 50,
+      "ms": 5.32,
+      "expanded": 7120
+    },
+    {
+      "case": 24,
+      "score": 4260,
+      "baseline": 4020,
+      "gain": 240,
+      "ms": 4.73,
+      "expanded": 6916
+    },
+    {
+      "case": 25,
+      "score": 4520,
+      "baseline": 4480,
+      "gain": 40,
+      "ms": 3.56,
+      "expanded": 5756
+    },
+    {
+      "case": 26,
+      "score": 4600,
+      "baseline": 3850,
+      "gain": 750,
+      "ms": 5.26,
+      "expanded": 7144
+    },
+    {
+      "case": 27,
+      "score": 4050,
+      "baseline": 4010,
+      "gain": 40,
+      "ms": 5.35,
+      "expanded": 7982
+    },
+    {
+      "case": 28,
+      "score": 4670,
+      "baseline": 4230,
+      "gain": 440,
+      "ms": 4.97,
+      "expanded": 6557
+    },
+    {
+      "case": 29,
+      "score": 3490,
+      "baseline": 3400,
+      "gain": 90,
+      "ms": 5.31,
+      "expanded": 6929
+    },
+    {
+      "case": 30,
+      "score": 4080,
+      "baseline": 4010,
+      "gain": 70,
+      "ms": 3.27,
+      "expanded": 5889
+    },
+    {
+      "case": 31,
+      "score": 3360,
+      "baseline": 3220,
+      "gain": 140,
+      "ms": 3.73,
+      "expanded": 5100
+    },
+    {
+      "case": 32,
+      "score": 4440,
+      "baseline": 4110,
+      "gain": 330,
+      "ms": 3.76,
+      "expanded": 5216
+    },
+    {
+      "case": 33,
+      "score": 2610,
+      "baseline": 2250,
+      "gain": 360,
+      "ms": 2.72,
+      "expanded": 3935
+    },
+    {
+      "case": 34,
+      "score": 3870,
+      "baseline": 3840,
+      "gain": 30,
+      "ms": 3.11,
+      "expanded": 5815
+    },
+    {
+      "case": 35,
+      "score": 3560,
+      "baseline": 2790,
+      "gain": 770,
+      "ms": 2.54,
+      "expanded": 6350
+    },
+    {
+      "case": 36,
+      "score": 4620,
+      "baseline": 4590,
+      "gain": 30,
+      "ms": 2.57,
+      "expanded": 8147
+    },
+    {
+      "case": 37,
+      "score": 1910,
+      "baseline": 1850,
+      "gain": 60,
+      "ms": 2.03,
+      "expanded": 6743
+    },
+    {
+      "case": 38,
+      "score": 4980,
+      "baseline": 4980,
+      "gain": 0,
+      "ms": 3.12,
+      "expanded": 7754
+    },
+    {
+      "case": 39,
+      "score": 3870,
+      "baseline": 3260,
+      "gain": 610,
+      "ms": 2.74,
+      "expanded": 5129
+    },
+    {
+      "case": 40,
+      "score": 3700,
+      "baseline": 3660,
+      "gain": 40,
+      "ms": 2.83,
+      "expanded": 5098
+    },
+    {
+      "case": 41,
+      "score": 3420,
+      "baseline": 3040,
+      "gain": 380,
+      "ms": 3.01,
+      "expanded": 7664
+    },
+    {
+      "case": 42,
+      "score": 4570,
+      "baseline": 4160,
+      "gain": 410,
+      "ms": 2.92,
+      "expanded": 7095
+    },
+    {
+      "case": 43,
+      "score": 3330,
+      "baseline": 2210,
+      "gain": 1120,
+      "ms": 1.76,
+      "expanded": 4001
+    },
+    {
+      "case": 44,
+      "score": 4750,
+      "baseline": 4200,
+      "gain": 550,
+      "ms": 3.42,
+      "expanded": 5369
+    },
+    {
+      "case": 45,
+      "score": 4800,
+      "baseline": 4740,
+      "gain": 60,
+      "ms": 4.8,
+      "expanded": 6187
+    },
+    {
+      "case": 46,
+      "score": 5280,
+      "baseline": 4780,
+      "gain": 500,
+      "ms": 4.03,
+      "expanded": 6576
+    },
+    {
+      "case": 47,
+      "score": 4200,
+      "baseline": 4150,
+      "gain": 50,
+      "ms": 3.69,
+      "expanded": 7990
+    },
+    {
+      "case": 48,
+      "score": 4470,
+      "baseline": 4430,
+      "gain": 40,
+      "ms": 4,
+      "expanded": 5968
+    },
+    {
+      "case": 49,
+      "score": 4970,
+      "baseline": 4800,
+      "gain": 170,
+      "ms": 3.53,
+      "expanded": 5696
+    },
+    {
+      "case": 50,
+      "score": 3200,
+      "baseline": 3200,
+      "gain": 0,
+      "ms": 2.68,
+      "expanded": 6980
+    },
+    {
+      "case": 51,
+      "score": 4590,
+      "baseline": 4260,
+      "gain": 330,
+      "ms": 2.96,
+      "expanded": 6011
+    },
+    {
+      "case": 52,
+      "score": 3150,
+      "baseline": 2760,
+      "gain": 390,
+      "ms": 2.44,
+      "expanded": 5456
+    },
+    {
+      "case": 53,
+      "score": 4790,
+      "baseline": 4790,
+      "gain": 0,
+      "ms": 3.32,
+      "expanded": 7009
+    },
+    {
+      "case": 54,
+      "score": 4640,
+      "baseline": 4000,
+      "gain": 640,
+      "ms": 2.85,
+      "expanded": 5467
+    },
+    {
+      "case": 55,
+      "score": 3920,
+      "baseline": 3860,
+      "gain": 60,
+      "ms": 2.29,
+      "expanded": 6289
+    },
+    {
+      "case": 56,
+      "score": 4060,
+      "baseline": 3940,
+      "gain": 120,
+      "ms": 3.81,
+      "expanded": 7728
+    },
+    {
+      "case": 57,
+      "score": 4760,
+      "baseline": 4760,
+      "gain": 0,
+      "ms": 3.26,
+      "expanded": 6846
+    },
+    {
+      "case": 58,
+      "score": 5300,
+      "baseline": 5220,
+      "gain": 80,
+      "ms": 2.71,
+      "expanded": 6243
+    },
+    {
+      "case": 59,
+      "score": 3970,
+      "baseline": 3950,
+      "gain": 20,
+      "ms": 3.04,
+      "expanded": 7039
+    },
+    {
+      "case": 60,
+      "score": 4520,
+      "baseline": 4520,
+      "gain": 0,
+      "ms": 2.91,
+      "expanded": 8861
+    }
+  ]
+}

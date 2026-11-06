@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#133e36">
+  <meta name="description" content="Comeback is a private student recovery planner. Fit work around your actual week and see what needs to move.">
+  <title>Comeback | Make room for a better week</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to planner</a>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Comeback home"><span class="brand-mark" aria-hidden="true">c<span>↗</span></span>comeback<span class="brand-dot">.</span></a>
+    <span class="privacy"><span aria-hidden="true">●</span> Your browser. Your week.</span>
+    <button class="text-button" id="help-button" aria-expanded="false" aria-controls="how-it-works">How it works <span aria-hidden="true">↗</span></button>
+  </header>
+  <main id="main">
+    <section class="intro" aria-labelledby="intro-title">
+      <div><p class="eyebrow">A little behind is still a place to start</p><h1 id="intro-title">Make room for<br>a <em>better week.</em></h1><p class="intro-copy">You can't add hours. You can choose what fits.<br>Turn a crowded to-do list into an honest plan.</p></div>
+      <aside class="week-card"><span class="tiny-label">YOUR NEXT SEVEN DAYS</span><label for="week-start">Week starts</label><input id="week-start" type="date" min="2000-01-01" max="2099-12-24" required><p>Deadlines use the end of the selected day.<br>All times follow your local wall clock.</p><div class="mode-tag" id="mode-tag">SYNTHETIC DEMO</div></aside>
+      <div class="orbit" aria-hidden="true"><span>one step<br>at a time</span></div>
+    </section>
+    <section class="how-it-works" id="how-it-works" hidden><h2>A plan with its workings shown</h2><p>Add work blocks of 30-180 minutes, set prerequisites, and select your available windows. Comeback searches complete blocks in time order. It favors importance (100 points per level) and energy fit (10-30 points per block). Morning has high energy, afternoon medium, evening light. Split larger assignments into meaningful steps.</p><p>A bounded beam search compares with an earliest-deadline baseline and keeps the better score. It can miss the best possible plan. Scores are planning preferences, never predicted marks. Availability is a maximum, not a recommendation to fill every hour. Calendar exports use floating local time; check your calendar after import.</p></section>
+    <div class="notice"><span class="notice-dot" aria-hidden="true"></span><p id="demo-notice">This is a synthetic student week. Try removing a window to see the plan recover.</p><button id="reset-demo" class="text-button">Reset demo</button></div>
+    <div id="status" role="status" aria-live="polite" class="status"></div>
+    <div id="error" role="alert" class="error" hidden></div>
+    <section class="workspace" aria-label="Planning workspace">
+      <div class="inputs">
+        <section class="panel work-panel" aria-labelledby="work-title">
+          <div class="panel-heading"><div><p class="eyebrow">01 / What matters</p><h2 id="work-title">Your work blocks <span class="count" id="task-count"></span></h2></div><button class="button dark small" id="add-task">+ Add work</button></div>
+          <div id="task-list" class="task-list"></div>
+          <p class="panel-note">Use Finish after completing a block to clear its prerequisite links. Remove discards unneeded work and is blocked while another block depends on it. Undo restores the last change.</p>
+        </section>
+        <section class="panel availability-panel" aria-labelledby="availability-title">
+          <div class="panel-heading"><div><p class="eyebrow">02 / Protect your time</p><h2 id="availability-title">When you're available</h2></div></div>
+          <p class="muted">Tap a window to open or close it. Rest is allowed. Close windows that have already passed; the planner does not read the current time.</p>
+          <div class="availability-scroll"><table class="availability-table"><caption class="sr-only">Available study windows by day</caption><thead id="availability-head"></thead><tbody id="availability-body"></tbody></table></div>
+          <div class="energy-key"><span><i class="energy high"></i>High focus 09-12</span><span><i class="energy medium"></i>Medium 14-17</span><span><i class="energy light"></i>Light 19-21</span></div>
+        </section>
+      </div>
+      <section class="panel result-panel" aria-labelledby="plan-title">
+        <div class="panel-heading"><div><p class="eyebrow">03 / Your next move</p><h2 id="plan-title">A week you can work with</h2></div><span class="live-tag">LOCAL PLAN</span></div>
+        <div class="metrics" id="metrics"></div>
+        <div id="change-note" class="change-note" hidden></div>
+        <div class="result-toolbar"><p id="score-note"></p><button id="export-calendar" class="button outline small">Export calendar <span aria-hidden="true">↗</span></button></div>
+        <p class="panel-note">Calendar exports are snapshots, not sync. Repeat imports may retain old blocks or create duplicates; review your calendar after importing.</p>
+        <div id="schedule" class="schedule"></div>
+        <div class="unscheduled" id="unscheduled"></div>
+        <details class="method"><summary>What went into this plan?</summary><p id="method-copy"></p><p>No grade predictions. No automatic academic advice. If deadlines can't move, use the unscheduled list to start a conversation with your tutor.</p></details>
+      </section>
+    </section>
+    <footer><div><a class="brand footer-brand" href="#">comeback.</a><p>A small plan is a good place to begin.</p></div><div class="data-actions"><button class="text-button" id="export-data">Save current plan JSON</button><button class="text-button" id="download-recovery" hidden>Download unreadable save</button><label class="text-button file-label">Open JSON<input id="import-data" type="file" accept="application/json,.json"></label><button class="text-button" id="clear-data">Start empty</button><span id="storage-note">Saved on this device</span></div></footer>
+  </main>
+  <dialog id="task-dialog" aria-labelledby="dialog-title">
+    <form id="task-form">
+      <div class="dialog-heading"><div><p class="eyebrow">ONE MANAGEABLE STEP</p><h2 id="dialog-title">Add a work block</h2></div><button type="button" class="icon-button" id="close-dialog" aria-label="Close work block form">×</button></div>
+      <label for="task-title">What will you finish?</label><input id="task-title" name="title" maxlength="120" placeholder="e.g. Draft the methods section" required>
+      <div class="form-grid"><div><label for="task-minutes">Time needed</label><select id="task-minutes" name="minutes"><option value="30">30 minutes</option><option value="60" selected>1 hour</option><option value="90">1.5 hours</option><option value="120">2 hours</option><option value="150">2.5 hours</option><option value="180">3 hours</option></select></div><div><label for="task-due">Deadline</label><input id="task-due" type="date" name="due" required></div><div><label for="task-priority">Importance</label><select id="task-priority" name="priority"><option value="1">1 / Nice to finish</option><option value="2">2 / Useful</option><option value="3" selected>3 / Important</option><option value="4">4 / Very important</option><option value="5">5 / Essential</option></select></div><div><label for="task-energy">Focus demand</label><select id="task-energy" name="energy"><option value="1">Light</option><option value="2" selected>Medium</option><option value="3">High</option></select></div></div>
+      <fieldset><legend>Finish these first <span class="muted">(optional)</span></legend><div id="dependency-options" class="dependency-options"></div></fieldset>
+      <p id="form-error" role="alert" class="error" hidden></p>
+      <div class="dialog-actions"><button type="button" id="cancel-dialog" class="button outline">Cancel</button><button type="submit" class="button dark">Save work block</button></div>
+    </form>
+  </dialog>
+  <noscript><p class="error">Comeback needs JavaScript to build your plan. All planning happens locally in your browser.</p></noscript>
+</body>
+</html>
